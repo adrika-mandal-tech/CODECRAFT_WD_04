@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adrika's Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+      }
+    body {
+      background: linear-gradient(120deg, #f0171e 0%, #7bc2dc 100%);
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: rgb(116, 231, 242);
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(227, 188, 188, 0.958);
+    }
+    header h1 {
+      font-size: 1.8rem;
+    }
+    nav a {
+      margin-left: 20px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 60px 40px;
+    }
+    #hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: url('https://images.unsplash.com/photo-1522202222213-7b61f2f7028f') no-repeat center center/cover;
+      color: rgb(245, 240, 240);
+      position: relative;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 1;
+      animation: fadeIn 2s ease-in-out;
+      box-shadow: 0 4px 8px rgba(227, 188, 188, 0.958);
+      border-radius: 10px;
+    }
+    #hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: fadeIn 3s ease-in-out;
+      color: #dedede;
+    }
+    #hero p {
+      font-size: 25px;
+      animation: pulse 2s infinite;
+      color: #dedede;
+    }
+    #hero img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 20px;
+      border: 4px solid white;
+    }
+    #hero img:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    .section-title {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      text-align: center;
+      color: yellow;
+    }
+    .projects, .skills, .certificates ,.training {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .project, .skill, .certificate, .training {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      width: 250px;
+      text-align: center;
+    }
+    .project:hover, .skill:hover, .certificate:hover, .training:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background: #222;
+      color: #e57979;
+      text-align: center;
+      padding: 20px;
+    }
+    a {
+      color: #2575fc;
+    }
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .view-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .view-section h3 {
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 10px;
+    }
+    .view-section button {
+      background-color: #fff;
+      color: #815aed;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .view-section button:hover {
+      background-color: #f1f1f1;
+    }
+    .cursor {
+        display: inline-block;
+        width: 2px;
+        background-color: white;
+        animation: blink 0.7s steps(1) infinite;
+      }
+      
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      
+      .typed-text {
+        font-style: italic;
+        font-weight: 600;
+        background: linear-gradient(90deg, #ff6ec4, #7873f5, #42e695);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: colorchange 6s linear infinite;
+      }
+      
+      @keyframes colorchange {
+        0% { filter: hue-rotate(0deg); }
+        100% { filter: hue-rotate(360deg); }
+      }
+      
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Adrika Mandal</h1>
+    <nav>
+      <a href="#hero">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#certificates">CERTIFICATES</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h2 id="typewriter"><span class="typed-text"></span><span class="cursor">&nbsp;</span></h2>
+    <p>Hey, I'm Adrika 👋</p>
+    <img src="adrika_photo.jpeg" alt="Adrika's Photo" sizes="(250px)" />
+    <p>Welcome to my portfolio! I love creating beautiful and functional web applications.</p>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+        I am currently pursuing B.Tech in CSE (Data Science & AI) at SRM University, Delhi-NCR. I love building cool and functional web apps, and I'm especially interested in AI, women’s safety tech, and ethical innovation.
+        Curious by nature and driven by purpose, I enjoy combining creativity with technology to create solutions that matter. I believe technology should empower and uplift people, and that's what I aspire to do with every project I take on.
+        I'm also passionate about learning new things, whether it's a new tech stack, UI/UX design principles, or emerging trends in AI. Outside of coding, you can find me sketching designs, brainstorming new ideas, or working on passion projects aimed at making a real-world impact.       
+        My goal? To become a versatile developer and innovator who builds with heart, thinks ethically & leads by example.
+    </p>
+  </section>
+  <section id="experience">
+    <h2 class="section-title">Experience</h2>
+    <div class="training">
+        <div class="training">
+          <h3>1. Data Structures Using C++</h3>
+          <p>Online Training from INTRNFORTE</p>
+          <p>Duration: 1-2 months</p>
+          <p>Topics Covered: Basics of C++, Data Structures, Algorithms</p>
+        </div>
+      </div>
+      
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Bangalore House Price Predictor Web App</h3>
+        <p>Takes input of indoors of a House to Predict its price.</p>
+        <button onclick="window.open('https://bangalore-house-price-predictor-dibd.onrender.com/')">View Project</button>
+      </div>
+      <div class="project">
+        <h3>JavaScript Tools</h3>
+        <p>Fun games like Tic-Tac-Toe Game and Pixel Art Generator built with JavaScript.</p>
+      </div>
+      <div class="project">
+        <h3>Gemini Clone</h3>
+        <p>It is a project aimed at replicating the functionality of Gemini, powered by the Google Gemini API, using Vanilla ,HTML,and CSS..</p>
+      </div>
+    </div>
+    <div class="view-section">
+      <h3>Want to explore all my projects?</h3>
+      <button onclick="window.open('https://github.com/adrika-mandal-tech?tab=repositories')">View All Projects</button>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML5</div>
+      <div class="skill">CSS3</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Python</div>
+      <div class="skill">AI/ML Basics</div>
+      <div class="skill">Figma</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">MySQL</div>
+      <div class="skill">Tableau</div>
+      <div class="skill">React (Beginner)</div>
+      <div class="skill">Flask (Beginner)</div>
+      <div class="skill">Scikit-Learn (Beginner)</div>
+
+    </div>
+  </section>
+
+  <section id="certificates">
+    <h2 class="section-title">Certificates</h2>
+    <div class="certificates">
+      <div class="certificate">Data Science Methodologies -IBM </div>
+      <div class="certificate">Introduction to Python-IBM</div>
+      <div class="certificate">Python 101 for DataScience  -IBM</div>
+      <div class="certificate">Google Cloud Study Jam - GDSC</div>
+    </div>
+    <div class="view-section">
+      <h3>See more of my certifications</h3>
+      <button onclick="window.open('https://www.linkedin.com/in/adrika-mandal-753226246/details/certifications/', '_blank')">View All Certificates</button>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Let's Talk!</h2>
+    <p style="text-align: center;">Email me at: 
+      <a href="mailto:adrika.mandal01@gmail.com">adrika.mandal01@gmail.com</a>
+    </p>
+    <p style="text-align: center;">Connect with me on:</p>
+    <div style="text-align: center; margin-top: 10px;">
+      <a href="mailto:adrika.mandal01@gmail.com" target="_blank" style="margin: 0 10px; color: #EA4335;">
+        <i class="fas fa-envelope fa-2x"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/adrika-mandal-753226246/" target="_blank" style="margin: 0 10px; color: #0077B5;">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      <a href="https://www.instagram.com/_adrika_mandal_/" target="_blank" style="margin: 0 10px; color: #E1306C;">
+        <i class="fab fa-instagram fa-2x"></i>
+      </a>
+    </div>
+  </section>
+  
+  <footer>
+    <p>&copy; 2025 Adrika Mandal. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+  <script>
+    const text = "I am a Passionate Software Developer in the making 🌟";
+    const typedText = document.querySelector('.typed-text');
+    let i = 0;
+  
+    function typeLine() {
+      if (i < text.length) {
+        typedText.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeLine, 30); // Speed of typing
+      }
+    } 
+    window.addEventListener('load', typeLine);
+  </script>  
+</body>
+</html>
+
+
